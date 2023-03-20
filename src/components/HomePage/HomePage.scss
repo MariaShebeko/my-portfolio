@@ -1,0 +1,77 @@
+@import '../../styles/variables';
+
+.home-page {
+  .text-wrapper {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40%;
+    // max-height: 90%;
+  }
+
+  h1 {
+    color: white;
+    font-size: 48px;
+    font-weight: 400;
+    margin: 0;
+
+    &::before {
+      content: '<h1>';
+      font-family: $accent-font;
+      color: $accent-color;
+      font-size: 18px;
+      opacity: 0.5;
+      position: absolute;
+      left: -40px;
+    }
+
+    &::after {
+      content: '</h1>';
+      font-family: $accent-font;
+      color: $accent-color;
+      font-size: 18px;
+      opacity: 0.5;
+      position: absolute;
+      left: -40px;
+      top: 126px;
+    }
+
+    img {
+      width: 36px;
+      margin-left: 20px;
+      opacity: 0;
+      animation: rotateIn 1s linear both;
+      animation-delay: 1.5s;
+    }
+  }
+
+  h2 {
+    color: #8d8d8d;
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-family: sans-serif;
+    animation: fadeIn 1s 1.8s backwards;
+  }
+
+  .contact-btn {
+    color: $accent-color;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-decoration: none;
+    border: 1px solid $accent-color;
+    padding: 10px 20px;
+    margin-top: 20px;
+    float: left;
+    animation: fadeIn 1s 1.8s backwards;
+    white-space: nowrap;
+
+    &:hover {
+      background-color: $accent-color;
+      color: #8d8d8d;
+    }
+  }
+}
